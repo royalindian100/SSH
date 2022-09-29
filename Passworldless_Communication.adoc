@@ -1,0 +1,11 @@
+Suppose we have two servers and need to do passwordless communication between both of them, Then will follow the below script
+
+### Step 1: Create an authentication key
+ssh-keygen command is use to generate a public/private authentication key pair. Authontication key allows user to connect to a remote system without supplieng a password
+[source,bash]
+$ ssh-keygen
+
+### Step 2: Copy the content from id_rsa.pub to the authorized keys
+[source,bash]
+$ cat id_rsa.pub >> authorized_keys
+
